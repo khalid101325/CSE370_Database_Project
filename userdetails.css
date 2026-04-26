@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+header
+{
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo
+{
+    font-size: 1.8em;
+}
+
+.menu a
+{
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+body
+{
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.profile-box
+{
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+}
+
+.profile-box p
+{
+    margin: 10px 0;
+}
+
+input
+{
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+button
+{
+    width: 100%;
+    padding: 10px;
+    background: #d14242;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover
+{
+    background: #c0392b;
+}
