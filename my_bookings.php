@@ -4,7 +4,6 @@ include("connect.php");
 if(!isset($_SESSION['email'])) { header("Location: login.php"); exit(); }
 $email = $_SESSION['email'];
 
-// Update the query to JOIN Service_Customization
 $sql = "SELECT b.booking_id, p.package_name, s.event_date, b.booking_status, 
                c.catering_type, c.decoration_style, c.photography_service
         FROM Booking b 
@@ -41,7 +40,7 @@ $result = $con->query($sql);
                     <th>ID</th>
                     <th>Package</th>
                     <th>Date</th>
-                    <th>Customization</th> <!-- NEW COLUMN -->
+                    <th>Customization</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -52,10 +51,8 @@ $result = $con->query($sql);
                     <td><?php echo $row['event_date']; ?></td>
                     <td>
                         <?php if($row['catering_type']): ?>
-                            <!-- Show choices if already done -->
                             <small>Food: <?php echo $row['catering_type']; ?><br>Decor: <?php echo $row['decoration_style']; ?></small>
                         <?php else: ?>
-                            <!-- Show link if NOT done yet -->
                             <a href="customize.php?id=<?php echo $row['booking_id']; ?>" class="btn-custom">Add Services</a>
                         <?php endif; ?>
                     </td>
