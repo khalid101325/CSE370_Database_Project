@@ -486,19 +486,28 @@ nav {
 <!-- NAVBAR (overlaid on hero) -->
 <header>
     <nav>
-        <div class="logo">Event-MS</div>
+        <div class="logo">
+            Event-MS
+        </div>
         <div class="menu">
-                    <a href="packages.php">Packages</a>
-            <?php if ($logged_in): ?>
-                            <a href="my_bookings.php">My Bookings</a>
-                <span class="welcome">Hi, <b><?php echo htmlspecialchars($user['name']); ?></b></span>
-                <a href="userdetails.php">Profile</a>
-                <a href="payment.php">Payment</a>
-                <a href="contact.php">Inquiry</a>
-                <a href="logout.php">Logout</a>
-            <?php else: ?>
+            
+            <?php if($logged_in): ?>
+                <span class="welcome">Hi, <b><?php echo htmlspecialchars($user['name']); ?></b></span> 
+            <?php endif; ?>
+            <a href="packages.php">Packages</a>
+            <?php if($logged_in): ?>
+                <a href="my_bookings.php">My Bookings</a>
+            <?php endif; ?>
+            <a href="gallery.php">Gallery</a>
+            <?php if(!$logged_in): ?>
                 <a href="login.php">Login</a>
                 <a href="sign.php">Signup</a>
+            <?php endif; ?>
+            <?php if($logged_in): ?>
+                <a href="payment.php">Payment</a>
+                <a href="contact.php">Inquiry</a>
+                <a href="userdetails.php">Profile</a>
+                <a href="logout.php">Logout</a>
             <?php endif; ?>
         </div>
     </nav>
