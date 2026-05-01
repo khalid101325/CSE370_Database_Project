@@ -3,6 +3,7 @@
     include("connect.php");
 
     $logged_in = isset($_SESSION['email']);
+    $user = null;
 
     if($logged_in)
     {
@@ -23,37 +24,36 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                Event-MS
-            </div>
-            <div class="menu">
+<header>
+    <nav>
+        <div class="logo">Event-MS</div>
+        <div class="menu">
 
-                <?php if($logged_in): ?>
-                    <span class="welcome">Hi, <b><?php echo htmlspecialchars($user['name']); ?></b></span>
-                    <a href="userdetails.php">Profile</a>
-                    <a href="payment.php">Payment</a>
-                    <a href="logout.php">Logout</a>
+            <a href="packages.php">Packages</a>
 
-                <?php else: ?>
-                    <a href="login.php">Login</a>
-                    <a href="sign.php">Signup</a>
-
-                <?php endif; ?>
-
-            </div>
-        </nav>
-        <section class="htxt">
-            <span>Enjoy</span>
-            <h1>The Best Event Management</h1>
-            <br>
             <?php if($logged_in): ?>
-                <a href="payment.php">Book your event now !</a>
+                <a href="my_bookings.php">My Bookings</a>
+                <span class="welcome">
+                    Hi, <b><?php echo htmlspecialchars($user['name']); ?></b>
+                </span>
+                <a href="userdetails.php">Profile</a>
+                <a href="logout.php">Logout</a>
             <?php else: ?>
-                <a href="login.php">Book your event now !</a>
+                <a href="login.php">Login</a>
+                <a href="sign.php">Signup</a>
             <?php endif; ?>
-        </section>
-    </header>
+
+        </div>
+    </nav>
+
+    <section class="htxt">
+        <span>Enjoy</span>
+        <h1>The Best Event Management</h1>
+        <br>
+
+        <a href="packages.php">Book your event now !</a>
+
+    </section>
+</header>
 </body>
 </html>
