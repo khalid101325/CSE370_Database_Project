@@ -16,16 +16,16 @@ $result = $con->query("
 <head>
     <meta charset="UTF-8">
     <title>Gallery</title>
-    <link rel="stylesheet" href="/Project/gallery.css">
+    <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
 <div class="background-fixed"></div>
 <nav>
     <div class="logo">Event-MS</div>
     <div class="menu">
-        <a href="/Project/index.php">Home</a>
-        <a href="/Project/packages.php">Packages</a>
-        <a href="/Project/my_bookings.php">My Bookings</a>
+        <a href="index.php">Home</a>
+        <a href="packages.php">Packages</a>
+        <a href="my_bookings.php">My Bookings</a>
     </div>
 </nav>
 <div class="htxt">
@@ -33,7 +33,7 @@ $result = $con->query("
     <div class="pkg-grid">
         <?php while($row = $result->fetch_assoc()): ?>
             <div class="pkg-card">
-                <img src="/Project/<?php echo htmlspecialchars($row['image_path']); ?>" class="gallery-img">
+                <img src="<?php echo htmlspecialchars($row['image_path']); ?>" class="gallery-img">
                 <h3><?php echo htmlspecialchars($row['package_name']); ?></h3>
                 <p><?php echo htmlspecialchars($row['description']); ?></p>
             </div>
