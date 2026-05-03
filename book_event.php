@@ -37,21 +37,65 @@ if(isset($_POST['confirm_booking'])) {
     <title>EMS - Confirm Booking</title>
     <link rel="stylesheet" href="index.css">
     <style>
-        .form-box { 
-            background: rgba(0,0,0,0.8); padding: 40px; border-radius: 15px; 
-            border: 1px solid rgba(255,255,255,0.2); width: 400px; margin: 0 auto;
-            text-align: left;
+    <style>
+        
+        body { 
+            /* DESIGN: Background with dark overlay. */
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url('images/index.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            font-family: Arial, sans-serif; 
         }
-        select, button { width: 100%; padding: 12px; margin: 15px 0; border-radius: 5px; font-size: 16px; }
-        button { background: indianred; color: white; border: none; cursor: pointer; font-weight: bold; }
-        label { color: #ccc; font-weight: bold; display: block; margin-top: 10px; }
-        .pkg-display { font-size: 1.5em; color: indianred; margin-bottom: 20px; text-align: center; display: block; }
+
+        /* DESIGN: Centering the form box like the homepage hero text. */
+        .htxt { 
+            position: relative; 
+            margin: 80px auto; 
+            max-width: 450px; 
+            width: 95%; 
+            text-align: center; 
+        }
+
+        /* DESIGN: Styling the dark form container.*/
+        .form-box { 
+            background: rgba(0,0,0,0.8); 
+            padding: 35px; 
+            border-radius: 15px; 
+            border: 1px solid rgba(255,255,255,0.2); 
+            text-align: left; 
+            color: white; 
+        }
+
+        /* DESIGN: Input and Button appearance. */
+        select, button { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 12px 0; 
+            border-radius: 5px; 
+        }
+
+        button { 
+            background: indianred; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            font-weight: bold; 
+        }
+        button:hover { background: #b53a3a; }
+        label { color: indianred; font-weight: bold; display: block; margin-top: 10px; }
     </style>
 </head>
 <body>
     <header>
-        <nav><div class="logo">Event-MS</div><div class="menu"><a href="index.php">Home</a> <a href="packages.php">Packages</a></div></nav>
-        
+        <!--Navigation menu.-->
+        <nav>
+            <div class="logo">Event-MS</div>
+            <div class="menu">
+                <a href="index.php">Home</a> 
+                <a href="packages.php">Packages</a>
+            </div>
+        </nav>
         <section class="htxt">
             <span>Confirm Your Selection for</span>
             <h1><?php echo $selected_package['package_name']; ?></h1>
