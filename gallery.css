@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background: #000;
+}
+.background-fixed {
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('/CSE370_Database_Project_dev/images/index.jpg') center/cover no-repeat;
+    z-index: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.htxt {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.htxt h1 {
+    margin-bottom: 20px;
+}
+.pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.pkg-card {
+    width: 350px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+}
+.pkg-card:hover {
+    transform: translateY(-5px);
+}
+.gallery-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
