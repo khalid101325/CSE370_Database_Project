@@ -14,7 +14,7 @@ body {
     inset: 0;
     background:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('/CSE370_Database_Project_dev/images/index.jpg') center/cover no-repeat;
+        url('/Project/images/index.jpg') center/cover no-repeat;
     z-index: 0;
 }
 nav {
