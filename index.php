@@ -18,15 +18,11 @@ if ($logged_in) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EMS</title>
     <style>
-    /* ── Reset ── */
+
 * { padding:0; margin:0; box-sizing:border-box; font-family:Arial, sans-serif; }
 
-/* ── Body ── */
 body { background:#0d0a08; color:#e8d5b0; }
 
-/* ══════════════════════════
-   SHARED BG SECTION BASE
-══════════════════════════ */
 .bg-section {
     background-image: url('index.jpg');
     background-size: cover;
@@ -35,9 +31,7 @@ body { background:#0d0a08; color:#e8d5b0; }
     position: relative;
 }
 
-/* ══════════════════════════
-   NAVBAR
-══════════════════════════ */
+
 header {
     background: transparent;
     position: absolute;
@@ -85,9 +79,6 @@ nav {
 .welcome { color:#c9a86c; font-size:14px; margin-right:6px; }
 .welcome b { color:#f0c060; }
 
-/* ══════════════════════════
-   HERO SECTION
-══════════════════════════ */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -147,9 +138,6 @@ nav {
 
 .htxt a:hover { background: #a93226; }
 
-/* ══════════════════════════
-   SECTION TITLES
-══════════════════════════ */
 .section-title {
     text-align: center;
     font-size: 1.7em;
@@ -170,9 +158,6 @@ nav {
     text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
 
-/* ══════════════════════════
-   CONTACT SECTION
-══════════════════════════ */
 .contact-section {
     padding: 70px 30px;
 }
@@ -240,9 +225,6 @@ nav {
 
 .contact-card a:hover { background: #a93226; }
 
-/* ══════════════════════════
-   FEEDBACK SECTION
-══════════════════════════ */
 .feedback-section {
     padding: 70px 30px;
 }
@@ -318,9 +300,6 @@ nav {
 
 .feedback-btn:hover { background: #a93226; }
 
-/* ══════════════════════════
-   FOOTER
-══════════════════════════ */
 .footer {
     background: #080503;
     color: #5a4530;
@@ -330,9 +309,6 @@ nav {
     border-top: 1px solid rgba(240,192,96,0.12);
 }
 
-/* ══════════════════════════
-   FLOATING CHAT WIDGET
-══════════════════════════ */
 .chat-bubble {
     position: fixed;
     bottom: 28px;
@@ -470,7 +446,6 @@ nav {
 }
 .chat-input-row button:hover { background:#6e1409; }
 
-/* ── Responsive ── */
 @media (max-width:600px) {
     .htxt h1 { font-size:1.9em; }
     .contact-row, .feedback-row { flex-direction:column; align-items:center; }
@@ -483,7 +458,6 @@ nav {
 </head>
 <body>
 
-<!-- NAVBAR (overlaid on hero) -->
 <header>
     <nav>
         <div class="logo">
@@ -513,7 +487,6 @@ nav {
     </nav>
 </header>
 
-<!-- HERO SECTION -->
 <div class="bg-section hero-section">
     <section class="htxt">
         <span>Enjoy</span>
@@ -527,7 +500,6 @@ nav {
     </section>
 </div>
 
-<!-- CONTACT SECTION -->
 <div class="bg-section contact-section">
     <h2 class="section-title">Contact Us</h2>
     <p class="section-sub">Reach us directly through any of these channels</p>
@@ -559,7 +531,6 @@ nav {
     </div>
 </div>
 
-<!-- FEEDBACK SECTION -->
 <div class="bg-section feedback-section">
     <h2 class="section-title">What Our Users Say</h2>
     <p class="section-sub">Share your experience with us</p>
@@ -589,18 +560,15 @@ nav {
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
     <p>&copy; 2025 Event-MS &mdash; University Project</p>
 </footer>
 
-<!-- FLOATING CHAT BUTTON -->
 <div class="chat-bubble" id="chatBubble" onclick="toggleChat()">
     💬
     <span class="chat-dot" id="chatDot"></span>
 </div>
 
-<!-- CHAT WINDOW -->
 <div class="chat-window" id="chatWindow">
     <div class="chat-header">
         <div class="chat-header-left">
