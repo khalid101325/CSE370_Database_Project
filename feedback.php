@@ -23,7 +23,7 @@ $error   = "";
 
 // Handle form submit
 if (isset($_POST['submit_feedback'])) {
-    $booking_id  = 1; // Temporary — replace with real booking_id when booking feature is done
+    $booking_id  = 1; 
     $rating      = intval($_POST['rating']);
     $review_text = trim($_POST['review_text']);
 
